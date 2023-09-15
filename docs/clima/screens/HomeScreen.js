@@ -88,7 +88,7 @@ export default function HomeScreen() {
                       showSearch? (
                         <TextInput 
                           onChangeText={handleTextDebounce} 
-                          placeholder="Search city" 
+                          placeholder="Pesquise uma cidade" 
                           placeholderTextColor={'black'} 
                           className="pl-6 h-10 pb-1 flex-1 text-base text-white" 
                         />
@@ -192,7 +192,7 @@ export default function HomeScreen() {
                     weather?.forecast?.forecastday?.map((item,index)=>{
                       const date = new Date(item.date);
                       const options = { weekday: 'long' };
-                      let dayName = date.toLocaleDateString('en-US', options);
+                      let dayName = date.toLocaleDateString('pt-BR', options);
                       dayName = dayName.split(',')[0];
 
                       return (
